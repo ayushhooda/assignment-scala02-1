@@ -55,4 +55,14 @@ class Operations {
     innerOperate(number, List())
   }
 
+  def runLengthEncoding(input: List[Int]): List[List[Int]] = {
+    def innerOperate(input: List[Int], output: List[List[Int]]): List[List[Int]] = {
+      input match {
+        case head :: tail => innerOperate(input.dropWhile(_ == head), output :+ input.takeWhile(_ == head))
+        case Nil => output
+      }
+    }
+    innerOperate(input, List())
+  }
+
 }
