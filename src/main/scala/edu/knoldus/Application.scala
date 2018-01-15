@@ -34,4 +34,8 @@ object Application extends App{
     log.info(s"$number2 is Sad \n")
   }
 
+  val runLengthInputList = List(1, 1, 2, 2, 3, 3, 3, 2, 2)
+  val runLengthOutputList = obj.runLengthEncoding(runLengthInputList)
+  log.info(runLengthOutputList)
+
 }
